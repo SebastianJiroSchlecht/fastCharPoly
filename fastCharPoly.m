@@ -11,6 +11,35 @@ function p = fastCharPoly( A )
 % Author: Sebastian J. Schlecht
 % Date: 11.04.2015
 
+%fastCharPoly - Fast algorithm for characteristic polynomial of square matrices.
+%Algortihm is described in 
+%La Budde's Method For Computing Characteristic Polynomials
+%by Rizwana Rehman and Ilse C.F. Ipsen
+%
+% Syntax:  p = fastCharPoly( A )
+%
+% Inputs:
+%    A - square matrix complex or real
+%
+% Outputs:
+%    p - coefficients of characteristic polynomial
+%
+% Example: 
+%    p = fastCharPoly( randn(4) )
+%    p = charpoly(magic(4)) - fastCharPoly(magic(4))
+%
+% Other m-files required: none
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author: Dr.-Ing. Sebastian Jiro Schlecht, 
+% International Audio Laboratories, University of Erlangen-Nuremberg
+% email address: sebastian.schlecht@audiolabs-erlangen.de
+% Website: sebastianjiroschlecht.com
+% 10. December 2018; Last revision: 10. December 2018
+
+
+
 
 N = size(A, 1);
 H = hess(A);
